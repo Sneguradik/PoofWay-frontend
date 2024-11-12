@@ -1,0 +1,40 @@
+@use "src/styles/variables" as *;
+
+.container{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+  border-radius: .5rem;
+  overflow: hidden;
+  @include default_animation;
+  border: 2px solid $primary_color;
+  max-width: 384px;
+  aspect-ratio: 5/7;
+
+}
+.img{
+  position: relative;
+  height: 100%;
+}
+.content{
+
+  background-color: $text_color;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  @include default_animation;
+  gap: 0.5rem;
+
+
+  border-radius: 0 0 .5rem .5rem;
+
+  &>h5{color: $primary_color; height: fit-content}
+
+
+
+  &>span{
+    @include small;
+    color: rgba($bg_color,.7);
+  }
+}

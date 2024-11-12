@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$bg_color : #0D0D0D;
+$primary_color : #10CBBB;
+$text_color: #fff;
+$ui_bg: $primary_color;
+$ui_fg: #000;
+
+
+@mixin NunitoFont{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+@mixin RobotoFont{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin h1{font-size: 2.986rem;}
+@mixin h2{font-size: 2.488rem;}
+@mixin h3{font-size: 2.074rem;}
+@mixin h4{font-size: 1.728rem;}
+@mixin h5{font-size: 1.44rem;}
+@mixin h6{font-size: 1.2rem;}
+@mixin p{font-size: 1rem;}
+@mixin small{font-size: 0.833rem;}
+@mixin very_small{font-size: 0.649rem;}
+
+@mixin default_scrollbar{
+  &::-webkit-scrollbar{
+    width: 12px;
+    margin-right: 2px;
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: $bg_color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary_color;
+    border-radius: 10px;
+    border: 3px solid $bg_color;
+  }
+}
+
+@mixin x_scrollbar{
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary_color;
+
+  }
+}
+
+@mixin default_animation{
+  transition: all .5s ease-in-out;
+}
+
+.default_btn{
+  background-color: $primary_color;
+  color: $text_color;
+  border-radius: 10px;
+
+  border: 2px solid $primary_color;
+  &:hover{
+    background: none;
+
+    color: $primary_color;
+  }
+}
+
+.outline_btn{
+  border-radius: 5px;
+  background: none;
+  color: $primary_color;
+
+  border: 2px solid $primary_color;
+
+  &:hover{
+    color: $text_color;
+    background-color: $primary_color;
+    border-color: $primary_color;
+  }
+}
+.nunito{
+  @include NunitoFont;
+}

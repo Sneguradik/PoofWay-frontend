@@ -1,0 +1,1 @@
+export function contactStyles(...args:(string|undefined)[]): string { return args.join(' ') }

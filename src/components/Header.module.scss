@@ -1,0 +1,74 @@
+@use "src/styles/variables" as *;
+
+.nav_trigger{
+  color: rgba($text_color,.7);
+  width: 20px;
+  height: 20px;
+}
+.wrapper{
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.title{
+  @include NunitoFont;
+}
+
+.nav_btn{
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5em 0;
+  color: rgb($text_color,.7);
+
+  transition: all .3s ease-in-out;
+
+  &>svg{
+    @include h6;
+  }
+  &:hover{
+    color: $primary_color;
+    scale: 1.05;
+  }
+}
+.profile{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile_data{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  &>button{
+    &>small{@include very_small;}
+    justify-content: flex-start;
+    padding: 0;
+    height: fit-content;
+  }
+}
+.auth_btn{
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+.auth_btn.outline{
+  background: none;
+  color: $primary_color;
+
+
+  &:hover{
+    color: $text_color;
+    background-color: $primary_color;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .menu{
+    width: 100%;
+  }
+}

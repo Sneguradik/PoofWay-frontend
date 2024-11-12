@@ -1,0 +1,63 @@
+@use "src/styles/variables" as *;
+
+.container{
+  display: flex;
+  flex-direction: column;
+  @include default_animation;
+  gap:1.5rem;
+}
+.input_group{
+  display: flex;
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  gap: 1rem;
+
+  &>input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    @include h6;
+    @include default_animation;
+    flex-grow: 1;
+    color: $primary_color;
+
+    &:hover, &:focus, &:active{
+      border-bottom: 2px solid rgba($text_color,.2);
+    }
+  }
+
+  &>button{
+    @include h6;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: .5em;
+    background: $primary_color;
+    @include default_animation;
+
+    &:hover{
+      color: $primary_color;
+      background-color: $text_color;
+    }
+  }
+
+}
+.settings_trigger{
+  padding: 0;
+  @include small;
+  color: rgba($primary_color, .7);
+  margin-bottom: 1rem;
+}
+.settings{
+  background: #222222;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+}
+.type_btn{
+  
+}

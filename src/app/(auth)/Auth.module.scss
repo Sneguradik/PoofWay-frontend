@@ -1,0 +1,102 @@
+@use "src/styles/variables" as *;
+
+.tbs_container {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  margin: 0;
+}
+.tbs{
+  width: 100%;
+  max-width: 500px;
+}
+
+.main{
+
+  width: 100%;
+  padding: 2.5rem;
+  //border: 3px solid $primary_color;
+  border-radius: 10px;
+
+
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+  background-color: rgba(#777,.2);
+}
+.input_box{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &>label{color: $primary_color;}
+
+  &>input{
+    border: 3px solid $primary_color;
+    border-radius: 10px;
+    @include h6;
+    font-weight: 400;
+  }
+}
+
+.check{
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &>p{
+    color: rgba($text_color,.7);
+  }
+
+}
+.checkbox{
+
+  border: 2px solid $primary_color;
+  color: $primary_color;
+
+}
+
+.pass_forgot{
+  @include small;
+  color: rgba($text_color, .7);
+  &:hover{color:$text_color}
+}
+.forgot_signed{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.otp_box{
+  justify-content: center;
+}
+.otp{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  width: 100%;
+  &>div{
+    border: 3px solid $primary_color !important;
+    border-radius: 5px !important;
+    @include h5;
+    @include NunitoFont;
+    height: 2em;
+    width: 2em;
+    aspect-ratio: 1/1 !important;
+  }
+
+}
+.two_inp{
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 500px){
+  .main{
+    background: none;
+  }
+}
