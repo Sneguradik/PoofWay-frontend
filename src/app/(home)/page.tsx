@@ -6,6 +6,7 @@ import MainSearchBar from "@components/MainSearchBar";
 import {Button} from "@ui/button";
 import Image from "next/image";
 import ActivityCard from "@components/ActivityCard";
+import {Input} from "@ui/input";
 
 export default function Home() {
   return (
@@ -45,9 +46,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={contactStyles("rest-w flex justify-center")}>
+      <div className={contactStyles("rest-w flex items-center flex-col")}>
+        <h3>Notify me when service will be released</h3>
+        <div className={"flex max-w-xl w-full flex-col gap-2"}>
+          <Input placeholder={"Email"}/>
+          <div className={"w-full flex gap-2"}>
+            <Input placeholder={"Name"}/>
+            <Input placeholder={"Surname"}/>
+          </div>
 
+          <Button>Notify me!</Button>
+        </div>
       </div>
+
+      <div></div>
 
     </div>
   );
